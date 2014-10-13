@@ -1,0 +1,140 @@
+{
+	"ps3":{
+		"meta":{
+			"name":"PS3",
+			"brand":"Sony",
+			"typeDevice":"Game Console",
+			"typeRemote":"Game Controller",
+			"description":"",
+			"color":"black",
+			"powerSupply":"USB",
+			"buttonsPerRow":4,
+			"shapes":["circle","lozenge"],
+			"sizes":["normal","small","big","tiny"],
+			"colors":["white","black","green"]
+		},
+		"buttons":[
+			[{"label":"I/O"                },{"specs":[2,2,2]}]
+		],
+		"tasks":[
+			{"turn on":[{"action":"press","button":"power"}]},
+			{"turn off":[{"action":"press","button":"power"}]},
+			{"ok":[{"action":"press","button":"X"}]},
+			{"cancel":[{"action":"press","button":"O"}]},
+			{"back":[{"action":"press","button":"O"}]}
+		]
+	},
+	"xb1":{
+		"meta":{
+			"name":"Xbox One",
+			"brand":"Microsoft",
+			"typeDevice":"Game Console",
+			"typeRemote":"Game Controller",
+			"description":"",
+			"color":"black",
+			"powerSupply":"AA",
+			"buttonsPerRow":4,
+			"shapes":["circle","lozenge"],
+			"sizes":["normal","small","big","tiny"],
+			"colors":["white","black","green"]
+		},
+		"buttons":[
+			[{"label":"I/O"                },{"specs":[2,2,2]}]
+		],
+		"tasks":[
+			{"turn on":[{"action":"press","button":"power"}]},
+			{"turn off":[{"action":"press","button":"power"}]},
+			{"ok":[{"action":"press","button":"A"}]},
+			{"cancel":[{"action":"press","button":"B"}]},
+			{"back":[{"action":"press","button":"B"}]}
+		]
+	},
+	"stereo":{
+		"meta":{
+			"name":"Stereo",
+			"brand":"Sony",
+			"typeDevice":"Receiver",
+			"typeRemote":"Bar",
+			"description":"",
+			"color":"silver",
+			"powerSupply":"AAA",
+			"buttonsPerRow":4,
+			"shapes":["circle","lozenge"],
+			"sizes":["normal","small","big","tiny"],
+			"colors":["white","black","green"]
+		},
+		"buttons":[
+			[{"label":"TV I/O"             },{"specs":[0,1,2]}],
+			[{"label":"USE MODE"           },{"specs":[0,3,0]}],
+			[{"label":"AV I/O P"           },{"specs":[0,1,2]}],
+			[{"label":"I/O"                },{"specs":[0,2,2]}],
+			[{"label":"VIDEO1"             },{"specs":[0,0,0]}],
+			[{"label":"VIDEO2"             },{"specs":[0,0,0]}],
+			[{"label":"VIDEO3"             },{"specs":[0,0,0]}],
+			[{"label":"DVD"                },{"specs":[0,0,0]}],
+			[{"label":"TV/SAT"             },{"specs":[0,0,0]}],
+			[{"label":"MD/TAPE"            },{"specs":[0,0,0]}],
+			[{"label":"CD/SACD"            },{"specs":[0,0,0]}],
+			[{"label":"TUNER"              },{"specs":[0,0,0]}],
+			[{"label":"PHONO"              },{"specs":[0,0,0]}],
+			[{"label":"AUX"                },{"specs":[0,0,0]}],
+			[{"label":"MULTI CH"           },{"specs":[0,0,0]}],
+			[{"label":"SOURCE"             },{"specs":[0,0,0]}],
+			[{"label":"2CH"                },{"specs":[1,0,1]}],
+			[{"label":"A.F.D."             },{"specs":[1,0,1]}],
+			[{"label":"MOVIE"              },{"specs":[1,0,1]}],
+			[{"label":"MUSIC"              },{"specs":[1,0,1]}],
+			[{"label":"TEST TONE"          },{"specs":[1,0,1]}],
+			[{"label":"DIRECT"             },{"specs":[1,0,1]}],
+			[{"label":"AAC BI-LING"        },{"specs":[1,0,1]}],
+			[{"label":"SB DECODING"        },{"specs":[1,0,1]}],
+			[{"label":"AUDIO"              },{"specs":[1,0,1]}],
+			[{"label":"SWAP/ANGLE"         },{"specs":[1,0,1]}],
+			[{"label":"JUMP/TIME"          },{"specs":[1,0,1]}],
+			[{"label":"PRESET/CH/D.SKIP(+)"},{"specs":[1,0,1]}],
+			[{"label":"(|<<)"              },{"specs":[1,0,1]}],
+			[{"label":"(>>|)"              },{"specs":[1,0,1]}],
+			[{"label":""                   },{"specs":[1,0,1]}],
+			[{"label":"(-)"                },{"specs":[1,0,1]}],
+			[{"label":"SHIFT(<<)"          },{"specs":[0,0,1]}],
+			[{"label":"D.TUNING(>>)"       },{"specs":[0,0,1]}],
+			[{"label":"DISC(-/--)"         },{"specs":[0,0,1]}],
+			[{"label":"ALT"                },{"specs":[0,0,0]}],
+			[{"label":"(>)"                },{"specs":[0,2,1]}],
+			[{"label":"(||)"               },{"specs":[0,2,1]}],
+			[{"label":"([])"               },{"specs":[0,2,1]}]
+		],
+		"tasks":[
+			{"turn on":[{"action":"press","button":"power"}]},
+			{"turn off":[{"action":"press","button":"power"}]},
+			{"ok":[{"action":"press","button":"ENTER"}]},
+			{"cancel":[{"action":"press","button":"N/A"}]},
+			{"back":[{"action":"press","button":"N/A"}]}
+		]
+	},
+	"tv":{
+		"meta":{
+			"name":"TV",
+			"brand":"Samsung",
+			"typeDevice":"Television",
+			"typeRemote":"Bar",
+			"description":"",
+			"color":"black",
+			"powerSupply":"AA",
+			"buttonsPerRow":4,
+			"shapes":["circle","lozenge","pentagon"],
+			"sizes":["normal","small","big","tiny"],
+			"colors":["grey","bluegrey","greengrey","red","green","yellow","blue"]
+		},
+		"buttons":[
+			[{"label":"I/O"                },{"specs":[2,2,2]}]
+		],
+		"tasks":[
+			{"turn on":[{"action":"press","button":"power"}]},
+			{"turn off":[{"action":"press","button":"power"}]},
+			{"ok":[{"action":"press","button":"ENTER"}]},
+			{"cancel":[{"action":"press","button":"BACK"}]},
+			{"back":[{"action":"press","button":"BACK"}]}
+		]
+	}
+}

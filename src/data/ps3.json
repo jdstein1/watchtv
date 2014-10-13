@@ -1,0 +1,46 @@
+{
+	"ps3":{
+		"tasks":[
+			{"turn on":{
+				"steps":[
+					{"action":"press", "button":"power"}
+				]
+			}},
+			{"turn off":{
+				"steps":[
+					{"action":"press", "button":"power"}
+				]
+			}}
+		]
+	},
+	"xb1":{
+		"tasks":[
+			{"turn on":{
+				"steps":[
+					{"1":"iudrhgid", "2":"iudrhgid", "3":"iudrhgid", "4":"iudrhgid", "5":"iudrhgid"}
+				]
+			}},{"turn off":{
+			}}
+		]
+	},
+	"stereo":{
+		"tasks":[
+			{"turn on":{
+				"steps":[
+					{"1":"iudrhgid", "2":"iudrhgid", "3":"iudrhgid", "4":"iudrhgid", "5":"iudrhgid"}
+				]
+			}},{"turn off":{
+			}}
+		]
+	},
+	"tv":{
+		"tasks":[
+			{"turn on":{
+				"steps":[
+					{"1":"iudrhgid", "2":"iudrhgid", "3":"iudrhgid", "4":"iudrhgid", "5":"iudrhgid"}
+				]
+			}},{"turn off":{
+			}}
+		]
+	}
+}

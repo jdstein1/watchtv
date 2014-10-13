@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>How To Watch TV</title>
+		<!-- Web Font:  Roboto -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:500,700,300" rel="stylesheet" type="text/css">
+		<!-- Icon Font:  Fontello -->
+		<link href="fontello-41ed261f/css/fontello.css" rel="stylesheet" type="text/css">
+		<link href="fontello-41ed261f/css/animation.css" rel="stylesheet" type="text/css">
+		<!--[if IE 7]><link rel="stylesheet" href="fontello-41ed261f/css/fontello-ie7.css"><![endif]-->
+		<!-- Custom CSS -->
+		<link href="css/basic.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<h1>How To Watch TV</h1>
+			<h2>Home</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="remote-ps3.html">PS3 Remote</a></li>
+				<li><a href="remote-stereo.html">Stereo Remote</a></li>
+				<li><a href="remote-tv.html">TV Remote</a></li>
+			</ul>
+		</nav>
+        <div title="Code: 0xe800" class="the-icons span3">
+        	<span class="tv-icon icon-power"></span>
+        </div>
+    	<span class="tv-icon icon-power"></span>
+		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<th>Action</th>
+					<th>TV Remote Button</th>
+					<th>Stereo Remote Button</th>
+					<th>PS3 Remote Button</th>
+					<th>Xbox One Remote Button</th>
+				</tr>
+				<tr>
+					<th>Description</th>
+					<td><span class="tv-icon icon ">Black</span></td>
+					<td><span class="tv-icon icon ">Silver</span></td>
+					<td><span class="tv-icon icon ">Game Controller</span></td>
+				</tr>
+				<tr>
+					<th>Turn On</th>
+					<td><span class="tv-icon icon-power red circle">Big Red Circle</span></td>
+					<td><span class="tv-icon icon-power green circle">Big Green Circle</span></td>
+					<td><span class="tv-icon icon ">"PS" Circle</span></td>
+				</tr>
+				<tr>
+					<th>Set To BluRay Player</th>
+					<td><span class="tv-icon icon ">Press "Source" until you see "BluRay" on screen</span></td>
+					<td><span class="tv-icon icon ">Press "Video 1" or "Video 2"</span></td>
+					<td><span class="tv-icon icon ">N/A</span></td>
+				</tr>
+				<tr>
+					<th>Set To TV</th>
+					<td><span class="tv-icon icon ">Press "Source" until you see "TV" on screen</span></td>
+					<td><span class="tv-icon icon ">Press "Video 1" or "Video 2"</span></td>
+					<td><span class="tv-icon icon ">N/A</span></td>
+				</tr>
+				<tr>
+					<th>Turn Off</th>
+					<td><span class="tv-icon icon-power red circle">Big Red Circle</span></td>
+					<td><span class="tv-icon icon-power green circle">Big Green Circle</span></td>
+					<td><span class="tv-icon icon ">"PS" Circle</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+$(function() {
+	console.log( "jQuery ready!" );
+	var myUrl = './data/all.json';
+	var httpRequest, theStuff, f0, f1, f2, f3, f4;
+	$body = $("body");
+	$html = $("html");
+	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+	    httpRequest = new XMLHttpRequest();
+	} else if (window.ActiveXObject) { // IE 8 and older
+	    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	// console.log(httpRequest);
+	var fOnReadyState = function () {
+		// console.log(httpRequest.readyState);
+		switch (httpRequest.readyState) {
+			case 0:
+				console.log('NOT READY -- httpRequest.readyState === 0 // ',httpRequest.readyState)
+				// f0()
+				// break;
+			case 1:
+				console.log('NOT READY -- httpRequest.readyState === 1 // ',httpRequest.readyState)
+				// f1()
+				// break;
+			case 2:
+				console.log('NOT READY -- httpRequest.readyState === 2 // ',httpRequest.readyState)
+				// f2()
+				// break;
+			case 3:
+				console.log('NOT READY -- httpRequest.readyState === 3 // ',httpRequest.readyState)
+				// f3()
+				break;
+			case 4:
+				console.log('httpRequest.readyState === 4 // ',httpRequest.readyState)
+				// f4()
+				if (httpRequest.status === 200) {
+					// console.log('httpRequest:', httpRequest);
+					// console.log('httpRequest.response:', httpRequest.response);
+					// console.log('httpRequest.responseText:', httpRequest.responseText);
+					// console.log('httpRequest.responseXML:', httpRequest.responseXML);
+					theStuff = JSON.parse(httpRequest.responseText);
+					console.log('theStuff:', theStuff);
+					$.each(theStuff, function (index, value) {
+						console.log('+++++++++++++++++++++++++++++++');
+						console.log('index:', index, ' // value:', value.meta.name);
+						fButtonLayout(value);
+					});
+				} else {
+					console.log('server error');
+				};
+				break;
+		}
+	};
+	httpRequest.onreadystatechange = fOnReadyState;
+	httpRequest.open('GET', myUrl, true);
+	httpRequest.send(null);
+	var fButtonLayout = function (value) {
+		// console.log('fButtonLayout -- index:', index);
+		console.log('fButtonLayout -- value:', value);
+		// Create the button layout of the remote control.  
+		// Data is JSON.
+		// Markup is HTML, using JS to create DOM nodes for the data.
+		// Rules:
+		// * Use "buttonsPerRow" as the basic grid/tabular structure 
+		//		of the layout.
+		// * Use size data node to override "buttonsPerRow" system is 
+		//		needed (i.e., if buttonsPerRow=4 for default size, a 
+		//		row of size=big buttons will be buttonsPerRow=3).
+		// Structure:
+		// * Use CSS column grid instead of HTML TABLE.
+		// $html.append(value.meta.name);
+
+		console.log('value.meta.typeRemote:',value.meta.typeRemote);
+
+		var $layout = $('<div>');
+		$layout.appendTo($body);
+		var $layoutBrand = $('<h3>').html(value.meta.brand);
+		$layoutBrand.appendTo($layout);
+		var $layoutName = $('<h1>').html(value.meta.name);
+		$layoutName.appendTo($layout);
+		var $layoutTypeDevice = $('<h2>').html(value.meta.typeDevice);
+		$layoutTypeDevice.appendTo($layout);
+
+		var $layoutTable = $('<table>');
+		$layoutTable.appendTo($layout);
+		var $layoutTbody = $('<tbody>');
+		$layoutTbody.appendTo($layoutTable);
+
+		$.each(value.buttons, function (index, value) {
+			console.log('this:',this);
+			console.log('this[0].label:',this[0].label);
+			console.log('this[0].label:',this[0].label);
+			// console.log('this[1]:',this[1]);
+			console.log('this[1].specs:',this[1].specs);
+
+			// btn Row
+			var $btnRow = $('<tr>');
+			$btnRow.appendTo($layoutTbody);
+			// btn Meta Info
+			var $btnInfo = $('<th>').html('button');
+			$btnInfo.appendTo($btnRow);
+			// btn Label Text
+			var $btnLabel = $('<td>')
+				// .addClass(this[1][0])
+				// .addClass(this[1][])
+				// .addClass(this[1][2])
+				.html(this[0].label);
+			$btnLabel.appendTo($btnRow);
+			// btn Design
+			var $btnDesign = $('<td>')
+				// .addClass(this[1][0])
+				// .addClass(this[1][])
+				// .addClass(this[1][2])
+				.html(this[0].icon);
+			$btnDesign.appendTo($btnRow);
+
+		});
+
+		console.log('value.tasks[0]:',value.tasks[0]);
+
+	};
+});
+		</script>
+	</body>
+</html>
