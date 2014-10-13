@@ -14,14 +14,16 @@
 			"colors":["white","black","green"]
 		},
 		"buttons":[
-			[{"label":"I/O"                },{"specs":[2,2,2]}]
+			[{"function":"power","label":"PS"             ,"icon":"ps"         ,"specs":[0,2,2]}]
 		],
 		"tasks":[
-			{"turn on":[{"action":"press","button":"power"}]},
-			{"turn off":[{"action":"press","button":"power"}]},
+			{"turn on":[{"action":"hold","button":"power"}]},
+			{"turn off":[{"action":"hold","button":"power"}]},
 			{"ok":[{"action":"press","button":"X"}]},
 			{"cancel":[{"action":"press","button":"O"}]},
-			{"back":[{"action":"press","button":"O"}]}
+			{"back":[{"action":"press","button":"O"}]},
+			{"watch blu-ray":[]},
+			{"watch tv":[]}
 		]
 	},
 	"xb1":{
@@ -39,14 +41,16 @@
 			"colors":["white","black","green"]
 		},
 		"buttons":[
-			[{"label":"I/O"                },{"specs":[2,2,2]}]
+			[{"function":"power","label":"X"             ,"icon":"x"         ,"specs":[2,2,2]}]
 		],
 		"tasks":[
-			{"turn on":[{"action":"press","button":"power"}]},
-			{"turn off":[{"action":"press","button":"power"}]},
+			{"turn on":[{"action":"hold","button":"power"}]},
+			{"turn off":[{"action":"hold","button":"power"}]},
 			{"ok":[{"action":"press","button":"A"}]},
 			{"cancel":[{"action":"press","button":"B"}]},
-			{"back":[{"action":"press","button":"B"}]}
+			{"back":[{"action":"press","button":"B"}]},
+			{"watch blu-ray":[]},
+			{"watch tv":[]}
 		]
 	},
 	"stereo":{
@@ -64,52 +68,54 @@
 			"colors":["white","black","green"]
 		},
 		"buttons":[
-			[{"label":"TV I/O"             },{"specs":[0,1,2]}],
-			[{"label":"USE MODE"           },{"specs":[0,3,0]}],
-			[{"label":"AV I/O P"           },{"specs":[0,1,2]}],
-			[{"label":"I/O"                },{"specs":[0,2,2]}],
-			[{"label":"VIDEO1"             },{"specs":[0,0,0]}],
-			[{"label":"VIDEO2"             },{"specs":[0,0,0]}],
-			[{"label":"VIDEO3"             },{"specs":[0,0,0]}],
-			[{"label":"DVD"                },{"specs":[0,0,0]}],
-			[{"label":"TV/SAT"             },{"specs":[0,0,0]}],
-			[{"label":"MD/TAPE"            },{"specs":[0,0,0]}],
-			[{"label":"CD/SACD"            },{"specs":[0,0,0]}],
-			[{"label":"TUNER"              },{"specs":[0,0,0]}],
-			[{"label":"PHONO"              },{"specs":[0,0,0]}],
-			[{"label":"AUX"                },{"specs":[0,0,0]}],
-			[{"label":"MULTI CH"           },{"specs":[0,0,0]}],
-			[{"label":"SOURCE"             },{"specs":[0,0,0]}],
-			[{"label":"2CH"                },{"specs":[1,0,1]}],
-			[{"label":"A.F.D."             },{"specs":[1,0,1]}],
-			[{"label":"MOVIE"              },{"specs":[1,0,1]}],
-			[{"label":"MUSIC"              },{"specs":[1,0,1]}],
-			[{"label":"TEST TONE"          },{"specs":[1,0,1]}],
-			[{"label":"DIRECT"             },{"specs":[1,0,1]}],
-			[{"label":"AAC BI-LING"        },{"specs":[1,0,1]}],
-			[{"label":"SB DECODING"        },{"specs":[1,0,1]}],
-			[{"label":"AUDIO"              },{"specs":[1,0,1]}],
-			[{"label":"SWAP/ANGLE"         },{"specs":[1,0,1]}],
-			[{"label":"JUMP/TIME"          },{"specs":[1,0,1]}],
-			[{"label":"PRESET/CH/D.SKIP(+)"},{"specs":[1,0,1]}],
-			[{"label":"(|<<)"              },{"specs":[1,0,1]}],
-			[{"label":"(>>|)"              },{"specs":[1,0,1]}],
-			[{"label":""                   },{"specs":[1,0,1]}],
-			[{"label":"(-)"                },{"specs":[1,0,1]}],
-			[{"label":"SHIFT(<<)"          },{"specs":[0,0,1]}],
-			[{"label":"D.TUNING(>>)"       },{"specs":[0,0,1]}],
-			[{"label":"DISC(-/--)"         },{"specs":[0,0,1]}],
-			[{"label":"ALT"                },{"specs":[0,0,0]}],
-			[{"label":"(>)"                },{"specs":[0,2,1]}],
-			[{"label":"(||)"               },{"specs":[0,2,1]}],
-			[{"label":"([])"               },{"specs":[0,2,1]}]
+			[{"function":"power","label":"TV I/O"          ,"icon":"io"         ,"specs":[0,1,2]}],
+			[{"function":""     ,"label":"USE MODE"        ,"icon":""         ,"specs":[0,3,0]}],
+			[{"function":"power","label":"AV I/O P"        ,"icon":"io"         ,"specs":[0,1,2]}],
+			[{"function":"power","label":"I/O"             ,"icon":"io"         ,"specs":[0,2,2]}],
+			[{"function":""     ,"label":"VIDEO1"          ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"VIDEO2"          ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"VIDEO3"          ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"DVD"             ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"TV/SAT"          ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"MD/TAPE"         ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"CD/SACD"         ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"TUNER"           ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"PHONO"           ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"AUX"             ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"MULTI CH"        ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"SOURCE"          ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":"2CH"             ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"A.F.D."          ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"MOVIE"           ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"MUSIC"           ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"TEST TONE"       ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"DIRECT"          ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"AAC BI-LING"     ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"SB DECODING"     ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"AUDIO"           ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"SWAP/ANGLE"      ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"JUMP/TIME"       ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"PRESET/CH/D.SKIP","icon":"plus"     ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":""                ,"icon":"skipback" ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":""                ,"icon":"skipahead","specs":[1,0,1]}],
+			[{"function":""     ,"label":""                ,"icon":""         ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":""                ,"icon":"minus"    ,"specs":[1,0,1]}],
+			[{"function":""     ,"label":"SHIFT"           ,"icon":"rew"      ,"specs":[0,0,1]}],
+			[{"function":""     ,"label":"D.TUNING"        ,"icon":"ff"       ,"specs":[0,0,1]}],
+			[{"function":""     ,"label":"DISC"            ,"icon":"-/--"     ,"specs":[0,0,1]}],
+			[{"function":""     ,"label":"ALT"             ,"icon":""         ,"specs":[0,0,0]}],
+			[{"function":""     ,"label":""                ,"icon":"play"     ,"specs":[0,2,1]}],
+			[{"function":""     ,"label":""                ,"icon":"pause"    ,"specs":[0,2,1]}],
+			[{"function":""     ,"label":""                ,"icon":"stop"     ,"specs":[0,2,1]}]
 		],
 		"tasks":[
 			{"turn on":[{"action":"press","button":"power"}]},
 			{"turn off":[{"action":"press","button":"power"}]},
 			{"ok":[{"action":"press","button":"ENTER"}]},
 			{"cancel":[{"action":"press","button":"N/A"}]},
-			{"back":[{"action":"press","button":"N/A"}]}
+			{"back":[{"action":"press","button":"N/A"}]},
+			{"watch blu-ray":[]},
+			{"watch tv":[]}
 		]
 	},
 	"tv":{
@@ -127,14 +133,16 @@
 			"colors":["grey","bluegrey","greengrey","red","green","yellow","blue"]
 		},
 		"buttons":[
-			[{"label":"I/O"                },{"specs":[2,2,2]}]
+			[{"function":"power","label":"I/O"             ,"icon":"io"         ,"specs":[2,2,2]}]
 		],
 		"tasks":[
 			{"turn on":[{"action":"press","button":"power"}]},
 			{"turn off":[{"action":"press","button":"power"}]},
 			{"ok":[{"action":"press","button":"ENTER"}]},
 			{"cancel":[{"action":"press","button":"BACK"}]},
-			{"back":[{"action":"press","button":"BACK"}]}
+			{"back":[{"action":"press","button":"BACK"}]},
+			{"watch blu-ray":[]},
+			{"watch tv":[]}
 		]
 	}
 }
